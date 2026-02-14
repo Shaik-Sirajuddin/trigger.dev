@@ -170,8 +170,8 @@ export function getSchemaParseFn<TType>(procedureParser: Schema): SchemaParseFn<
   }
 
   if (parser["~standard"] && typeof parser["~standard"].validate === "function") {
-    return (value) => {
-      let response = parser["~standard"].validate(value);
+    return async (value) => {
+      let response = await parser["~standard"].validate(value);
       if ("value" in response) {
         return response["value"] as TType;
       }

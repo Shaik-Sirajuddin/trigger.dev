@@ -1,5 +1,5 @@
 ---
-"@trigger.dev/core": major
+"@trigger.dev/core": minor
 ---
 Why
 Allow usage of validation libraries that implement standard schema for schemaTask 
